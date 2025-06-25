@@ -13,56 +13,65 @@
       <title>Frontend Mentor | Age calculator app</title>
    </head>
    <body>
-      <form class="dateInput">
-         <label for="day">Day</label>
-         <input
-            type="number"
-            name="day"
-            id="day"
-            placeholder="DD"
-            min="1"
-            max="31"
-            required
-         />
+      <main>
+         <form class="dateInput">
+            <label for="day">Day</label>
+            <input
+               type="number"
+               name="day"
+               id="day"
+               placeholder="DD"
+               min="1"
+               max="31"
+               required
+            />
 
-         <label for="month">Month</label>
-         <input
-            type="number"
-            name="month"
-            id="month"
-            placeholder="MM"
-            min="1"
-            max="12"
-            required
-         />
+            <label for="month">Month</label>
+            <input
+               type="number"
+               name="month"
+               id="month"
+               placeholder="MM"
+               min="1"
+               max="12"
+               required
+            />
 
-         <label for="year">Year</label>
-         <input
-            type="number"
-            name="year"
-            id="year"
-            placeholder="YYYY"
-            min="1900"
-            required
-         />
+            <label for="year">Year</label>
+            <input
+               type="number"
+               name="year"
+               id="year"
+               placeholder="YYYY"
+               min="1900"
+               required
+            />
 
-         <button type="submit">&darr;</button>
-      </form>
+            <button type="submit">&darr;</button>
+         </form>
 
-      <div class="ageDisplay">
-         <p><strong class="ageHighlight" id="yearDisplay">--</strong> years</p>
-         <p>
-            <strong class="ageHighlight" id="monthDisplay">--</strong> months
-         </p>
-         <p><strong class="ageHighlight" id="dayDisplay">--</strong> days</p>
-      </div>
+         <div class="ageDisplay">
+            <p>
+               <strong class="ageHighlight" id="yearDisplay">--</strong> years
+            </p>
+            <p>
+               <strong class="ageHighlight" id="monthDisplay">--</strong> months
+            </p>
+            <p><strong class="ageHighlight" id="dayDisplay">--</strong> days</p>
+         </div>
+      </main>
 
-      <div class="attribution">
-         Challenge by
-         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-         </a>
-         . Coded by <a href="#">Your Name Here</a>.
-      </div>
+      <footer>
+         <div class="attribution">
+            Challenge by
+            <a
+               href="https://www.frontendmentor.io?ref=challenge"
+               target="_blank"
+            >
+               Frontend Mentor
+            </a>
+            . Coded by <a href="#">Your Name Here</a>.
+         </div>
+      </footer>
    </body>
 </html>
