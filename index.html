@@ -13,51 +13,59 @@
       <title>Frontend Mentor | Age calculator app</title>
    </head>
    <body>
-      <main>
-         <form class="dateInput">
-            <label for="day" class="poppins bold size2Rem grey500">Day</label>
-            <input
-               type="number"
-               name="day"
-               id="day"
-               class="poppins bold size2Rem"
-               placeholder="DD"
-               min="1"
-               max="31"
-               required
-            />
+      <main class="flex">
+         <form class="dateInput flex">
+            <div class="labelAndInput">
+               <label for="day" class="poppins bold size2Rem grey500">
+                  Day
+               </label>
+               <input
+                  type="number"
+                  name="day"
+                  id="day"
+                  class="poppins bold size2Rem"
+                  placeholder="DD"
+                  min="1"
+                  max="31"
+                  required
+               />
+            </div>
 
-            <label for="month" class="poppins bold size2Rem grey500">
-               Month
-            </label>
-            <input
-               type="number"
-               name="month"
-               id="month"
-               class="poppins bold size2Rem"
-               placeholder="MM"
-               min="1"
-               max="12"
-               required
-            />
+            <div class="labelAndInput">
+               <label for="month" class="poppins bold size2Rem grey500">
+                  Month
+               </label>
+               <input
+                  type="number"
+                  name="month"
+                  id="month"
+                  class="poppins bold size2Rem"
+                  placeholder="MM"
+                  min="1"
+                  max="12"
+                  required
+               />
+            </div>
 
-            <label for="year" class="poppins bold size2Rem grey500">
-               Year
-            </label>
-            <input
-               type="number"
-               name="year"
-               id="year"
-               class="poppins bold size2Rem"
-               placeholder="YYYY"
-               min="1900"
-               required
-            />
+            <div class="labelAndInput">
+               <label for="year" class="poppins bold size2Rem grey500">
+                  Year
+               </label>
+               <input
+                  type="number"
+                  name="year"
+                  id="year"
+                  class="poppins bold size2Rem"
+                  placeholder="YYYY"
+                  min="1900"
+                  required
+               />
+            </div>
 
             <button type="submit" class="btnSubmit size2Rem">&darr;</button>
          </form>
 
-         <div class="ageDisplay">
+         <div class="ageDisplay flex">
             <p class="poppins extrabold italic">
                <strong class="ageHighlight" id="yearDisplay">--</strong> years
             </p>
