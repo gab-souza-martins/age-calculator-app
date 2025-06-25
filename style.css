@@ -35,6 +35,16 @@
    color: var(--purple-500);
 }
 
+.btnSubmit {
+   width: 3rem;
+   height: 3rem;
+   border: none;
+   border-radius: 1em;
+   background-color: var(--purple-500);
+   font-size: 2rem;
+   color: var(--white);
+}
+
 .attribution {
    font-size: 1rem;
    text-align: center;
