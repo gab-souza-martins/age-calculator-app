@@ -12,23 +12,26 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
-.poppins-regular-italic {
+.poppins {
    font-family: "Poppins", sans-serif;
-   font-size: 2rem;
-   font-weight: 400;
-   font-style: italic;
 }
-.poppins-bold {
-   font-family: "Poppins", sans-serif;
-   font-size: 2rem;
+.regular {
+   font-weight: 400;
+}
+.bold {
    font-weight: 700;
    font-style: normal;
 }
-.poppins-extrabold-italic {
-   font-family: "Poppins", sans-serif;
+.extrabold {
    font-size: 4rem;
    font-weight: 800;
+}
+.italic {
    font-style: italic;
+}
+
+.size2Rem {
+   font-size: 2rem;
 }
 
 .ageHighlight {
@@ -41,7 +44,6 @@
    border: none;
    border-radius: 1em;
    background-color: var(--purple-500);
-   font-size: 2rem;
    color: var(--white);
 }
 
