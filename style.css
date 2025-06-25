@@ -1,3 +1,33 @@
+:root {
+   /** Cores primárias */
+   --purple-500: hsl(259, 100%, 65%);
+   --red-400: hsl(0, 100%, 67%);
+
+   /** Cores neutras */
+   --white: hsl(0, 100%, 100%);
+   --grey-100: hsl(0, 0%, 94%);
+   --grey-200: hsl(0, 0%, 86%);
+   --grey-500: hsl(0, 1%, 44%);
+   --black: hsl(0, 0%, 0%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+.poppins-regular-italic {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-style: italic;
+}
+.poppins-bold {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+.poppins-extrabold-italic {
+   font-family: "Poppins", sans-serif;
+   font-weight: 800;
+   font-style: italic;
+}
+
 .attribution {
    font-size: 11px;
    text-align: center;
