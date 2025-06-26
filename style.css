@@ -47,11 +47,12 @@ main {
 }
 .btnSubmit {
    grid-area: submit;
-   width: 3rem;
-   height: 3rem;
+   width: 4rem;
+   height: 4rem;
    border: none;
-   border-radius: 1em;
+   border-radius: 2em;
    background-color: var(--purple-500);
+   font-size: 2.5rem;
    color: var(--white);
 }
 
