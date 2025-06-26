@@ -67,6 +67,7 @@ main {
       "dayInput monthInput yearInput"
       ". submit .";
    justify-items: center;
+   gap: 2rem 1rem;
 }
 
 .dayInput {
