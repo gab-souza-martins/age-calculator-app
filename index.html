@@ -16,14 +16,12 @@
       <main class="flex">
          <form class="dateInput flex">
             <div class="labelAndInput">
-               <label for="day" class="poppins bold size2Rem grey500">
-                  Day
-               </label>
+               <label for="day" class="poppins bold grey500"> Day </label>
                <input
                   type="number"
                   name="day"
                   id="day"
-                  class="poppins bold size2Rem"
+                  class="poppins bold regularFontSize"
                   placeholder="DD"
                   min="1"
                   max="31"
@@ -32,14 +30,12 @@
             </div>
 
             <div class="labelAndInput">
-               <label for="month" class="poppins bold size2Rem grey500">
-                  Month
-               </label>
+               <label for="month" class="poppins bold grey500"> Month </label>
                <input
                   type="number"
                   name="month"
                   id="month"
-                  class="poppins bold size2Rem"
+                  class="poppins bold regularFontSize"
                   placeholder="MM"
                   min="1"
                   max="12"
@@ -48,21 +44,22 @@
             </div>
 
             <div class="labelAndInput">
-               <label for="year" class="poppins bold size2Rem grey500">
-                  Year
-               </label>
+               <label for="year" class="poppins bold grey500"> Year </label>
                <input
                   type="number"
                   name="year"
                   id="year"
-                  class="poppins bold size2Rem"
+                  class="poppins bold regularFontSize"
                   placeholder="YYYY"
                   min="1900"
+                  max="3000"
                   required
                />
             </div>
 
-            <button type="submit" class="btnSubmit size2Rem">&darr;</button>
+            <button type="submit" class="btnSubmit regularFontSize">
+               &darr;
+            </button>
          </form>
 
          <div class="ageDisplay flex">
