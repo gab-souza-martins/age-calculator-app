@@ -11,6 +11,37 @@
    --black: hsl(0, 0%, 0%);
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+.poppins {
+   font-family: "Poppins", sans-serif;
+}
+.regular {
+   font-weight: 400;
+}
+.bold {
+   font-weight: 700;
+   font-style: normal;
+}
+.extrabold {
+   font-size: 4rem;
+   font-weight: 800;
+}
+.italic {
+   font-style: italic;
+}
+
+.regularFontSize {
+   font-size: 1.7rem;
+}
+
+.grey500 {
+   color: var(--grey-500);
+}
+
+.ageHighlight {
+   color: var(--purple-500);
+}
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -22,6 +53,8 @@ body {
 }
 main {
    background-color: var(--white);
+   margin: 3rem 1rem 2rem;
+   padding: 3rem 1rem;
 }
 
 .flex {
@@ -56,39 +89,11 @@ main {
    color: var(--white);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
-.poppins {
-   font-family: "Poppins", sans-serif;
-}
-.regular {
-   font-weight: 400;
-}
-.bold {
-   font-weight: 700;
-   font-style: normal;
-}
-.extrabold {
-   font-size: 4rem;
-   font-weight: 800;
-}
-.italic {
-   font-style: italic;
-}
-
-.regularFontSize {
-   font-size: 1.7rem;
-}
-
 .dateInput label {
    font-size: 1.2rem;
 }
-
-.grey500 {
-   color: var(--grey-500);
-}
-
-.ageHighlight {
-   color: var(--purple-500);
+.dateInput input {
+   width: 6ch;
 }
 
 .attribution {
