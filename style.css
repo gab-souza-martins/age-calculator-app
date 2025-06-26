@@ -20,14 +20,39 @@
 body {
    background-color: var(--grey-100);
 }
+main {
+   background-color: var(--white);
+}
 
 .flex {
    display: flex;
    flex-flow: row wrap;
 }
+.grid {
+   display: grid;
+   grid-template:
+      "dayInput monthInput yearInput"
+      ". submit .";
+   justify-items: center;
+}
 
-main {
-   background-color: var(--white);
+.dayInput {
+   grid-area: dayInput;
+}
+.monthInput {
+   grid-area: monthInput;
+}
+.yearInput {
+   grid-area: yearInput;
+}
+.btnSubmit {
+   grid-area: submit;
+   width: 3rem;
+   height: 3rem;
+   border: none;
+   border-radius: 1em;
+   background-color: var(--purple-500);
+   color: var(--white);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
@@ -63,15 +88,6 @@ main {
 
 .ageHighlight {
    color: var(--purple-500);
-}
-
-.btnSubmit {
-   width: 3rem;
-   height: 3rem;
-   border: none;
-   border-radius: 1em;
-   background-color: var(--purple-500);
-   color: var(--white);
 }
 
 .attribution {
