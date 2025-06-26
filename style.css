@@ -91,10 +91,17 @@ main {
    height: 4rem;
    z-index: 1;
    border: none;
-   border-radius: 2em;
+   border-radius: 3em;
    background-color: var(--purple-500);
-   font-size: 2.5rem;
    color: var(--white);
+   cursor: pointer;
+   transition: background-color 150ms, transform 100ms;
+}
+.btnSubmit:hover {
+   background-color: var(--black);
+}
+.btnSubmit:active {
+   transform: scale(90%);
 }
 .horizontalLine {
    grid-area: hLine;
