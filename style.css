@@ -23,7 +23,7 @@
    font-style: normal;
 }
 .extrabold {
-   font-size: 4rem;
+   font-size: 3.5rem;
    font-weight: 800;
 }
 .italic {
@@ -31,7 +31,7 @@
 }
 
 .regularFontSize {
-   font-size: 1.7rem;
+   font-size: 1.4rem;
 }
 
 .grey500 {
@@ -52,8 +52,9 @@ body {
    background-color: var(--grey-100);
 }
 main {
+   max-width: 28rem;
    background-color: var(--white);
-   margin: 3rem 1rem 2rem;
+   margin: 3rem auto 2rem;
    padding: 3rem 1rem;
    border-radius: 2rem 2rem 7rem;
    box-shadow: 0px 0px 5px 0px var(--black);
@@ -64,6 +65,8 @@ main {
    flex-flow: row wrap;
 }
 .grid {
+   margin: auto;
+   width: 90%;
    display: grid;
    grid-template:
       "dayInput monthInput yearInput"
@@ -101,8 +104,16 @@ main {
    color: var(--grey-100);
 }
 
+.labelAndInput {
+   max-width: 10ch;
+}
+.ageDisplay {
+   margin: auto;
+   width: 90%;
+}
+
 .dateInput label {
-   font-size: 1.2rem;
+   font-size: 1rem;
 }
 .dateInput input {
    width: 6ch;
@@ -114,4 +125,15 @@ main {
 }
 .attribution a {
    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 641px) {
+   .grid {
+      grid-template:
+         "dayInput monthInput yearInput ."
+         ". . . submit"
+         "hLine hLine hLine hLine";
+      column-gap: 2rem;
+      justify-items: left;
+   }
 }
