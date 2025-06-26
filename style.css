@@ -21,12 +21,13 @@ body {
    background-color: var(--grey-100);
 }
 
-main {
-   background-color: var(--white);
-}
-
 .flex {
    display: flex;
+   flex-flow: row wrap;
+}
+
+main {
+   background-color: var(--white);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
