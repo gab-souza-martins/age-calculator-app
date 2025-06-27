@@ -52,7 +52,7 @@ body {
    background-color: var(--grey-100);
 }
 main {
-   max-width: 28rem;
+   width: clamp(300px, 28rem, 95%);
    background-color: var(--white);
    margin: 3rem auto 2rem;
    padding: 3rem 1rem;
