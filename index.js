@@ -36,7 +36,16 @@ function validateInputs() {
 
    if (dayValue === "") {
       setErrorMsg(dayInput, "Day is required");
-   } else if (dayValue < 1 || dayValue > 31) {
+   } else if (
+      dayValue < 1 ||
+      dayValue > 31 ||
+      (dayValue > 29 && monthValue == 2) ||
+      (dayValue > 30 &&
+         (monthValue == 4 ||
+            monthValue == 6 ||
+            monthValue == 9 ||
+            monthValue == 11))
+   ) {
       setErrorMsg(dayInput, "Insert a valid day");
    } else if (dayValue == 29 && monthValue == 2) {
       const isLeapYear = new Date(yearValue, 1, 29).getDate() === 29;
