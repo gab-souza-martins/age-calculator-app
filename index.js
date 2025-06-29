@@ -14,9 +14,33 @@ dateForm.addEventListener("submit", (event) => {
    validateInputs();
 });
 
+function validateInputs() {
+   const dayValue = dayInput.value.trim();
+   const monthValue = monthInput.value.trim();
+   const yearValue = yearInput.value.trim();
+
+   if (dayValue === "") {
+      setErrorMsg(dayInput, "Day is required");
+   } else {
+      setSuccess(dayInput);
+   }
+
+   if (monthValue === "") {
+      setErrorMsg(monthInput, "Month is required");
+   } else {
+      setSuccess(monthInput);
+   }
+
+   if (yearValue === "") {
+      setErrorMsg(yearInput, "Year is required");
+   } else {
+      setSuccess(yearInput);
+   }
+}
+
 function setErrorMsg(element, message) {
-   const elementParent = element.elementParent;
-   const errorDisplay = elementParent.querySelector(".errorText");
+   const elementParent = element.parentElement;
+   const errorDisplay = elementParent.querySelector(".error");
    const label = elementParent.querySelector("label");
 
    label.classList.add("errorText");
@@ -24,8 +48,12 @@ function setErrorMsg(element, message) {
    errorDisplay.innerText = message;
 }
 
-function validateInputs() {
-   const dayValue = dayInput.value.trim();
-   const monthValue = monthInput.value.trim();
-   const yearValue = yearInput.value.trim();
+function setSuccess(element) {
+   const elementParent = element.parentElement;
+   const errorDisplay = elementParent.querySelector(".error");
+   const label = elementParent.querySelector("label");
+
+   label.classList.remove("errorText");
+   element.classList.remove("errorInput");
+   errorDisplay.innerText = "";
 }
