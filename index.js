@@ -8,6 +8,21 @@ const dayError = document.getElementById("dayError");
 const monthError = document.getElementById("monthError");
 const yearError = document.getElementById("yearError");
 
+dayInput.onkeydown = (event) => {
+   numbersOnly(event);
+};
+monthInput.onkeydown = (event) => {
+   numbersOnly(event);
+};
+yearInput.onkeydown = (event) => {
+   numbersOnly(event);
+};
+function numbersOnly(event) {
+   if (isNaN(event.key) && event.key !== "Backspace") {
+      event.preventDefault();
+   }
+}
+
 dateForm.addEventListener("submit", (event) => {
    event.preventDefault();
 
