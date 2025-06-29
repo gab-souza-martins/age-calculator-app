@@ -150,7 +150,6 @@ main {
 }
 
 .errorText {
-   display: none;
    color: var(--red-400);
 }
 .errorInput {
