@@ -125,6 +125,10 @@ main {
 .dateInput input {
    width: 6ch;
 }
+.dateInput input:focus{
+   outline: 0;
+   border: 2px solid var(--purple-500);
+}
 
 .attribution {
    font-size: 1rem;
@@ -150,5 +154,5 @@ main {
    color: var(--red-400);
 }
 .errorInput {
-   border: 1px solid var(--red-400);
+   border: 2px solid var(--red-400);
 }

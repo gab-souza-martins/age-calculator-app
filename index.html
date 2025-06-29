@@ -16,54 +16,48 @@
       <main class="flex">
          <form class="dateInput grid">
             <div class="labelAndInput dayInput">
-               <label for="day" class="poppins bold grey500"> Day </label>
+               <label for="day" class="poppins bold grey500" id="dayLabel">
+                  Day
+               </label>
                <input
-                  type="number"
+                  type="text"
+                  inputmode="numeric"
                   name="day"
                   id="day"
                   class="poppins bold regularFontSize"
                   placeholder="DD"
-                  min="1"
-                  max="31"
-                  required
                />
-               <span class="poppins italic errorText" id="yearError"
-                  >Invalid date</span
-               >
+               <div class="poppins italic errorText" id="dayError"></div>
             </div>
 
             <div class="labelAndInput monthInput">
-               <label for="month" class="poppins bold grey500"> Month </label>
+               <label for="month" class="poppins bold grey500" id="monthLabel">
+                  Month
+               </label>
                <input
-                  type="number"
+                  type="text"
+                  inputmode="numeric"
                   name="month"
                   id="month"
                   class="poppins bold regularFontSize"
                   placeholder="MM"
-                  min="1"
-                  max="12"
-                  required
                />
-               <span class="poppins italic errorText" id="yearError"
-                  >Invalid date</span
-               >
+               <div class="poppins italic errorText" id="monthError"></div>
             </div>
 
             <div class="labelAndInput yearInput">
-               <label for="year" class="poppins bold grey500"> Year </label>
+               <label for="year" class="poppins bold grey500" id="yearLabel">
+                  Year
+               </label>
                <input
-                  type="number"
+                  type="text"
+                  inputmode="numeric"
                   name="year"
                   id="year"
                   class="poppins bold regularFontSize"
                   placeholder="YYYY"
-                  min="1900"
-                  max="3000"
-                  required
                />
-               <span class="poppins italic errorText" id="yearError"
-                  >Invalid date</span
-               >
+               <div class="poppins italic errorText" id="yearError"></div>
             </div>
 
             <button type="submit" class="btnSubmit">
