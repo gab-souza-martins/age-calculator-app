@@ -1,5 +1,4 @@
 const dateForm = document.getElementById("dateForm");
-
 const dayInput = document.getElementById("day");
 const monthInput = document.getElementById("month");
 const yearInput = document.getElementById("year");
@@ -7,6 +6,10 @@ const yearInput = document.getElementById("year");
 const dayError = document.getElementById("dayError");
 const monthError = document.getElementById("monthError");
 const yearError = document.getElementById("yearError");
+
+const dayDisplay = document.getElementById("dayDisplay");
+const monthDisplay = document.getElementById("monthDisplay");
+const yearDisplay = document.getElementById("yearDisplay");
 
 dayInput.onkeydown = (event) => {
    numbersOnly(event);
@@ -67,7 +70,7 @@ function validateInputs() {
    if (yearValue === "") {
       setErrorMsg(yearInput, "Year is required");
    } else if (yearValue < 1900 || yearValue > 3000) {
-      setErrorMsg(yearInput, "Insert a valid year");
+      setErrorMsg(yearInput, "Year must be between 1900 and 3000");
    } else {
       setSuccess(yearInput);
    }
