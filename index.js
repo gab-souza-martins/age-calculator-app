@@ -104,8 +104,7 @@ function calculateAge() {
    } else {
       yearDisplay.textContent =
          currentDate.getFullYear() - inputDate.getFullYear();
-      monthDisplay.textContent =
-         currentDate.getMonth() + 1 - (inputDate.getMonth() + 1);
+      monthDisplay.textContent = currentDate.getMonth() - inputDate.getMonth();
       dayDisplay.textContent = currentDate.getDate() - inputDate.getDate();
    }
 }
