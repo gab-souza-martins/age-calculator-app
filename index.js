@@ -93,7 +93,21 @@ function calculateAge() {
       `${yearInput.value}-${monthInput.value}-${dayInput.value}`
    );
 
-   console.log(inputDate.toString());
+   if (currentDate.getTime() < inputDate.getTime()) {
+      setErrorMsg(dayInput, "Cannot be future date");
+      setErrorMsg(monthInput, "Cannot be future date");
+      setErrorMsg(yearInput, "Cannot be future date");
+
+      yearDisplay.textContent = "--";
+      monthDisplay.textContent = "--";
+      dayDisplay.textContent = "--";
+   } else {
+      yearDisplay.textContent =
+         currentDate.getFullYear() - inputDate.getFullYear();
+      monthDisplay.textContent =
+         currentDate.getMonth() + 1 - (inputDate.getMonth() + 1);
+      dayDisplay.textContent = currentDate.getDate() - inputDate.getDate();
+   }
 }
 
 function setErrorMsg(element, message) {
