@@ -1,0 +1,162 @@
+:root {
+   /** Cores primárias */
+   --purple-500: hsl(259, 100%, 65%);
+   --red-400: hsl(0, 100%, 67%);
+
+   /** Cores neutras */
+   --white: hsl(0, 100%, 100%);
+   --grey-100: hsl(0, 0%, 94%);
+   --grey-200: hsl(0, 0%, 86%);
+   --grey-500: hsl(0, 1%, 44%);
+   --black: hsl(0, 0%, 0%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+.poppins {
+   font-family: "Poppins", sans-serif;
+}
+.regular {
+   font-weight: 400;
+}
+.bold {
+   font-weight: 700;
+   font-style: normal;
+}
+.extrabold {
+   font-size: 3.4rem;
+   font-weight: 800;
+}
+.italic {
+   font-style: italic;
+}
+
+.regularFontSize {
+   font-size: 1.4rem;
+}
+
+.grey500 {
+   color: var(--grey-500);
+}
+
+.ageHighlight {
+   color: var(--purple-500);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: var(--grey-100);
+}
+main {
+   width: clamp(300px, 28rem, 95%);
+   background-color: var(--white);
+   margin: 3rem auto 2rem;
+   padding: 3rem 0.5rem;
+   border-radius: 2rem 2rem 7rem;
+   box-shadow: 0px 0px 5px 0px var(--black);
+}
+
+.flex {
+   display: flex;
+   flex-flow: row wrap;
+}
+.grid {
+   margin: auto;
+   width: 90%;
+   display: grid;
+   grid-template:
+      "dayInput monthInput yearInput"
+      ". submit ."
+      "hLine hLine hLine";
+   justify-items: center;
+   gap: 2rem 1rem;
+}
+
+.dayInput {
+   grid-area: dayInput;
+}
+.monthInput {
+   grid-area: monthInput;
+}
+.yearInput {
+   grid-area: yearInput;
+}
+.btnSubmit {
+   grid-area: submit;
+   width: 4rem;
+   height: 4rem;
+   z-index: 1;
+   border: none;
+   border-radius: 3em;
+   background-color: var(--purple-500);
+   color: var(--white);
+   cursor: pointer;
+   transition: background-color 150ms, transform 100ms;
+}
+.btnSubmit:hover {
+   background-color: var(--black);
+}
+.btnSubmit:active {
+   transform: scale(90%);
+}
+.horizontalLine {
+   grid-area: hLine;
+   width: 100%;
+   position: relative;
+   transform: translateY(-65px);
+   color: var(--grey-100);
+}
+
+.labelAndInput {
+   width: 8ch;
+}
+.ageDisplay {
+   margin: auto;
+   width: 90%;
+}
+
+.dateInput label {
+   font-size: 1rem;
+}
+.dateInput input {
+   max-width: 100%;
+}
+.dateInput input:focus {
+   outline: 0;
+   border: 2px solid var(--purple-500);
+}
+
+.attribution {
+   font-size: 1rem;
+   text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 641px) {
+   .grid {
+      grid-template:
+         "dayInput monthInput yearInput ."
+         ". . . submit"
+         "hLine hLine hLine hLine";
+      column-gap: 1.5rem;
+      justify-items: left;
+   }
+}
+@media (min-width: 400px) {
+   .labelAndInput {
+      width: 10ch;
+   }
+}
+
+.errorText {
+   color: var(--red-400);
+}
+.errorInput {
+   border: 2px solid var(--red-400);
+}

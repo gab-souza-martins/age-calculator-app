@@ -1,37 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./assets/images/favicon-32x32.png"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <title>Frontend Mentor | Age calculator app</title>
+   </head>
+   <body>
+      <main class="flex">
+         <form class="dateInput grid" id="dateForm">
+            <div class="labelAndInput dayInput">
+               <label for="day" class="poppins bold grey500" id="dayLabel">
+                  Day
+               </label>
+               <input
+                  type="text"
+                  inputmode="numeric"
+                  name="day"
+                  id="day"
+                  class="poppins bold regularFontSize"
+                  placeholder="DD"
+               />
+               <div class="poppins italic errorText error" id="dayError"></div>
+            </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+            <div class="labelAndInput monthInput">
+               <label for="month" class="poppins bold grey500" id="monthLabel">
+                  Month
+               </label>
+               <input
+                  type="text"
+                  inputmode="numeric"
+                  name="month"
+                  id="month"
+                  class="poppins bold regularFontSize"
+                  placeholder="MM"
+               />
+               <div
+                  class="poppins italic errorText error"
+                  id="monthError"
+               ></div>
+            </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+            <div class="labelAndInput yearInput">
+               <label for="year" class="poppins bold grey500" id="yearLabel">
+                  Year
+               </label>
+               <input
+                  type="text"
+                  inputmode="numeric"
+                  name="year"
+                  id="year"
+                  class="poppins bold regularFontSize"
+                  placeholder="YYYY"
+               />
+               <div class="poppins italic errorText error" id="yearError"></div>
+            </div>
 
-  Day
-  DD
+            <button type="submit" class="btnSubmit">
+               <img
+                  src="assets/images/icon-arrow.svg"
+                  alt="Button with down arrow"
+                  srcset=""
+               />
+            </button>
+            <hr class="horizontalLine" />
+         </form>
 
-  Month
-  MM
+         <div class="ageDisplay flex">
+            <p class="poppins extrabold italic">
+               <strong class="ageHighlight" id="yearDisplay">--</strong> years
+            </p>
+            <p class="poppins extrabold italic">
+               <strong class="ageHighlight" id="monthDisplay">--</strong> months
+            </p>
+            <p class="poppins extrabold italic">
+               <strong class="ageHighlight" id="dayDisplay">--</strong> days
+            </p>
+         </div>
+      </main>
 
-  Year
-  YYYY
+      <footer>
+         <div class="attribution poppins regular italic">
+            Challenge by
+            <a
+               href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q"
+               target="_blank"
+            >
+               Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/gab-souza-martins" target="_blank">
+               Gabriel de Souza</a
+            >.
+         </div>
+      </footer>
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <script src="index.js"></script>
+   </body>
 </html>
