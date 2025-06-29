@@ -37,6 +37,10 @@ function validateInputs() {
    const monthValue = monthInput.value.trim();
    const yearValue = yearInput.value.trim();
 
+   let validDay = false;
+   let validMonth = false;
+   let validYear = false;
+
    if (dayValue === "") {
       setErrorMsg(dayInput, "Day is required");
    } else if (
@@ -57,6 +61,7 @@ function validateInputs() {
       }
    } else {
       setSuccess(dayInput);
+      validDay = true;
    }
 
    if (monthValue === "") {
@@ -65,6 +70,7 @@ function validateInputs() {
       setErrorMsg(monthInput, "Insert a valid month");
    } else {
       setSuccess(monthInput);
+      validMonth = true;
    }
 
    if (yearValue === "") {
@@ -73,7 +79,21 @@ function validateInputs() {
       setErrorMsg(yearInput, "Year must be between 1900 and 3000");
    } else {
       setSuccess(yearInput);
+      validYear = true;
    }
+
+   if (validDay && validMonth && validYear) {
+      calculateAge();
+   }
+}
+
+function calculateAge() {
+   const currentDate = new Date();
+   const inputDate = new Date(
+      `${yearInput.value}-${monthInput.value}-${dayInput.value}`
+   );
+
+   console.log(inputDate.toString());
 }
 
 function setErrorMsg(element, message) {
