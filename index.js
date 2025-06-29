@@ -36,18 +36,29 @@ function validateInputs() {
 
    if (dayValue === "") {
       setErrorMsg(dayInput, "Day is required");
+   } else if (dayValue < 1 || dayValue > 31) {
+      setErrorMsg(dayInput, "Insert a valid day");
+   } else if (dayValue == 29 && monthValue == 2) {
+      const isLeapYear = new Date(yearValue, 1, 29).getDate() === 29;
+      if (!isLeapYear) {
+         setErrorMsg(dayInput, "Inserted year is not a leap year");
+      }
    } else {
       setSuccess(dayInput);
    }
 
    if (monthValue === "") {
       setErrorMsg(monthInput, "Month is required");
+   } else if (monthValue < 1 || monthValue > 12) {
+      setErrorMsg(monthInput, "Insert a valid month");
    } else {
       setSuccess(monthInput);
    }
 
    if (yearValue === "") {
       setErrorMsg(yearInput, "Year is required");
+   } else if (yearValue < 1900 || yearValue > 3000) {
+      setErrorMsg(yearInput, "Insert a valid year");
    } else {
       setSuccess(yearInput);
    }
@@ -62,7 +73,6 @@ function setErrorMsg(element, message) {
    element.classList.add("errorInput");
    errorDisplay.innerText = message;
 }
-
 function setSuccess(element) {
    const elementParent = element.parentElement;
    const errorDisplay = elementParent.querySelector(".error");
