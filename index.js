@@ -55,9 +55,12 @@ function validateInputs() {
    ) {
       setErrorMsg(dayInput, "Insert a valid day");
    } else if (dayValue == 29 && monthValue == 2) {
-      const isLeapYear = new Date(yearValue, 1, 29).getDate() === 29;
+      let isLeapYear = new Date(yearValue, 1, 29).getDate() === 29;
       if (!isLeapYear) {
          setErrorMsg(dayInput, "Inserted year is not a leap year");
+      } else {
+         setSuccess(dayInput);
+         validDay = true;
       }
    } else {
       setSuccess(dayInput);
@@ -92,20 +95,23 @@ function calculateAge() {
    const inputDate = new Date(
       `${yearInput.value}-${monthInput.value}-${dayInput.value}`
    );
+   const resultDate = currentDate.getTime() - inputDate.getTime();
+
+   let resultDays = Math.floor(resultDate / (1000 * 3600 * 24));
+   let resultMonths = Math.floor(resultDays / (365.25 / 12));
+   let resultYears = Math.floor(resultMonths / 12);
+
+   resultDays = Math.floor(resultDays - resultMonths * (365.25 / 12));
+   resultMonths = Math.floor(resultMonths - resultYears * 12);
 
    if (currentDate.getTime() < inputDate.getTime()) {
       setErrorMsg(dayInput, "Cannot be future date");
       setErrorMsg(monthInput, "Cannot be future date");
       setErrorMsg(yearInput, "Cannot be future date");
-
-      yearDisplay.textContent = "--";
-      monthDisplay.textContent = "--";
-      dayDisplay.textContent = "--";
    } else {
-      yearDisplay.textContent =
-         currentDate.getFullYear() - inputDate.getFullYear();
-      monthDisplay.textContent = currentDate.getMonth() - inputDate.getMonth();
-      dayDisplay.textContent = currentDate.getDate() - inputDate.getDate();
+      yearDisplay.textContent = resultYears;
+      monthDisplay.textContent = resultMonths;
+      dayDisplay.textContent = resultDays;
    }
 }
 
@@ -117,6 +123,10 @@ function setErrorMsg(element, message) {
    label.classList.add("errorText");
    element.classList.add("errorInput");
    errorDisplay.innerText = message;
+
+   yearDisplay.textContent = "--";
+   monthDisplay.textContent = "--";
+   dayDisplay.textContent = "--";
 }
 function setSuccess(element) {
    const elementParent = element.parentElement;
