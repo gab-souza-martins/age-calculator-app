@@ -62,7 +62,7 @@ main {
 
 .flex {
    display: flex;
-   flex-flow: row wrap;
+   flex-flow: column wrap;
 }
 .grid {
    margin: auto;
